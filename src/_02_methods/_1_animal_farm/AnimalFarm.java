@@ -28,11 +28,28 @@ public class AnimalFarm {
 		/* 1. Ask the user which animal they want, then see and hear 
 		 *    the animal they chose using one of the methods below.
 		*/			 
-			
+			String whatAnimal = JOptionPane.showInputDialog("What animal do you choose?");
 		/* 2. Make it so that the user can keep entering new animals. */
-
+if (whatAnimal.equalsIgnoreCase("cow")) {
+	playNoise(mooFile);
+showImage(cowIcon);
+} else if (whatAnimal.equalsIgnoreCase("duck")) {
+	playNoise(quackFile);
+showImage(duckIcon);
+} else if (whatAnimal.equalsIgnoreCase("dog")) {
+	playNoise(woofFile);
+showImage(dogIcon);
+} else if (whatAnimal.equalsIgnoreCase("cat")) {
+	playNoise(meowFile);
+showImage(catIcon);
+} else if (whatAnimal.equalsIgnoreCase("llama")) {
+	playNoise(llamaFile);
+showImage(llamaIcon);
+}else {
+JOptionPane.showMessageDialog(null, "That wasn't an animal on this farm. Sorry!");
+}
 	}
-
+	
 	void moo() {
 		playNoise(mooFile);
 		showImage(cowIcon);
@@ -56,12 +73,8 @@ public class AnimalFarm {
 	void llamaScream() {
 		playNoise(llamaFile);
 		showImage(llamaIcon);
+
 	}
-	
-
-
-	
-
 	/* Ignore this stuff */
 	String path = "src/_02_methods/_1_animal_farm/";
 	String quackFile = "quack.wav";

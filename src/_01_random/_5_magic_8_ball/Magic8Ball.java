@@ -16,10 +16,21 @@ public class Magic8Ball {
 	// 3. Make a variable and initialize it to a random number.
 	//     ** You will need to make a random object!
 	//     Limit the random numbers to be between 0 and 3
-
+public static void main(String[] args) {
+	
+Random ran = new Random();
+	int number = ran.nextInt(4);
 	
 	// 4. If the random number is 0
-
+if (number==0) {
+	System.out.println("Yes");
+} else if (number==1) {
+	System.out.println("No");
+}else if (number==2) {
+	System.out.println("Maybe you should ask Google?");
+}else if (number==3) {
+	System.out.println("I have no idea! Why are you asking me again?");
+}
 	// -- tell the user "Yes"
 
 	// 5. If the random number is 1
@@ -34,4 +45,5 @@ public class Magic8Ball {
 
 	// -- write your own answer
 
+}
 }
