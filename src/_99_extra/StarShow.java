@@ -23,7 +23,7 @@ int Y = 600;
 		// 8. Make a variable to hold the star size and set it to 25
 int starsize = 25;
 		// 12. Repeat the steps #19 to #18, 30 times
-
+// okay
 			// 19. Set the pen width to i 
 	for (int i=0; i<30; i++) {
 			// 10. Set the X position of the robot to your X variable
@@ -33,15 +33,15 @@ int starsize = 25;
 			// 9. Call the drawStar() method with your star size variable
 	drawStar(starsize);
 			// 14. Increase the X position by star size. See Figure 2.
-	
+	X+=starsize;
 			// 15. decrease the Y position by star size. See Figure 3.
-	
+	Y-=starsize;
 			// 16. Increase the star size by 20
-	
+	starsize+=20;
 			// 17. Turn the robot 12 degrees
-	
+	robot.turn(12);
 			// 18. Make each star a different random color like in Figure 4. 
-
+robot.setRandomPenColor();
 	}
 	}
 
